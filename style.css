@@ -25,14 +25,16 @@ header {
 }
 
 section {
-    flex: 1;
+    display: block;
     padding: 20px;
-    background-image: url('./imagens/vista-superior-de-batatas-raladas-e-inteiras-em-tigelas-com-faca-de-ralador-de-manteiga-de-sal-pimenta-no-fundo-bordo-com-espaco-de-copia.jpg');
+    position: relative;
+    padding-bottom: 100px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+    url('./imagens/vista-superior-de-batatas-raladas-e-inteiras-em-tigelas-com-faca-de-ralador-de-manteiga-de-sal-pimenta-no-fundo-bordo-com-espaco-de-copia.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
     background-attachment: fixed;
-    opacity: 0.89;
 }
 
 
@@ -75,13 +77,36 @@ section {
     animation: pulse 1s ease-in-out infinite;
 }
 
-#home {
-    color: #f71804f6;
-    -webkit-text-stroke: 1px rgb(241, 236, 236);
+section h2,
+#home,
+#services,
+#contact {
+    color: #f2ee0b;
+   
     margin-left: 5px;
-    font-size: 45px;
+    font-size: 48px;
     text-align: left;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+section p {
+    color: #f5f2f2;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+section ul li {
+    color: #ffffff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 10px;
 }
 
 
@@ -135,13 +160,44 @@ a {
     font-size: 20px;
 }
 
+/* Botão WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 70px;
+    height: 70px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+.whatsapp-button:hover {
+    background-color: #20ba5a;
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Iframe do Maps */
+iframe {
+    margin-bottom: 30px;
+    display: block;
+}
+
 
 /* Footer */
 footer {
     background-color: #3f3f3f;
     padding: 8px 20px;
     text-align: center;
-    margin-top: auto;
+    margin-top: 0;
 }
 
 .footer-content {
@@ -278,7 +334,7 @@ footer p {
     }
 
     .nav-menu.active {
-        max-height: 150px;
+        max-height: 200px;
     }
 
     .nav-menu ul {
@@ -296,6 +352,49 @@ footer p {
 
     .nav-menu li:last-child {
         border-bottom: none;
+    }
+
+    section {
+        padding: 10px;
+        padding-bottom: 40px;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+       
+      
+    }
+
+    section h2,
+    #home,
+    #services,
+    #contact {
+        font-size: 32px;
+        margin-left: 0;
+    }
+
+    section p {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    section ul li {
+        font-size: 16px;
+    }
+
+    iframe {
+        width: 100% !important;
+        height: 300px !important;
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+
+    .whatsapp-button {
+        width: 55px;
+        height: 55px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 28px;
     }
 
     /* Animação do Hambúrguer */
@@ -320,13 +419,20 @@ footer p {
         align-items: center;
     }
 
+    footer p {
+        font-size: 14px;
+    }
+
     .footer-content {
         flex-direction: column;
         gap: 8px;
     }
 
-
-
-
-
+    .instagram-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
 }
+
+
