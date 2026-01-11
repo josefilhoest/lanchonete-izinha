@@ -187,8 +187,10 @@ a {
 
 /* Iframe do Maps */
 iframe {
-    margin-bottom: 30px;
-    display: block;
+    margin-bottom: 10px;
+    margin-top: 60px;
+    display: flex;
+    position: relative;
 }
 
 
